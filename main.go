@@ -41,7 +41,7 @@ func startWebServer() {
     RegisterWebPages("view/index.html", "view/404.html")
 
     // Start HTTP server on specified port
-    err := http.ListenAndServe("0.0.0.0:8080", nil)
+    err := http.ListenAndServe("127.0.0.1:8080", nil)
     if err != nil {
         log.Fatalf("start http server failed(err: %s).", err.Error())
     }
